@@ -17,47 +17,52 @@ var min = 5
 function gameStart(){
 
 
-//cd=Math.floor(Math.random()*(max-min)+min);
-//d=Math.floor(Math.random()*cd)
-c = 10
-d = 2
+cd=Math.floor(Math.random()*(max-min)+min);
+d=Math.floor(Math.random()*cd)
+
 switch(cdSymbol) {
     case 0:
-        //c=cd-d;
-        cd = c+d;
+        c=cd-d;
         break;
     case 1:
-        //c=cd+d;
-        cd = c-d;
+        c=cd+d;
         break;
     case 2:
-        //c=cd/d;
-        cd = c*d;
+        c=cd/d;
         break;
     default:
        console.log('default triggered')
+       break;
 }
 
 switch(acSymbol) {
     case 0:
         a=ac-c;
+        break;
     case 1:
         a=ac+a;
+        break;
     case 2:
         a=ac/c;
+        break;
     default:
         console.log('default triggered')
+        break;
 }
 
 switch(abSymbol){
     case 0:
         b=ab-a;
+        break;
     case 1:
         b=ab+a;
+        break;
     case 2:
         b=ab/a;
+        break;
     default:
         console.log('default triggered')
+        break;
 }
 //random number for start of game
 console.log(`a symbol b is ${symbol[abSymbol]}`, abSymbol);
